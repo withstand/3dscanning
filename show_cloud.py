@@ -43,7 +43,7 @@ def get_test_data_list():
 
 def make_3d_widget(cloud_data):    
     w = gl.GLViewWidget()
-    w.opts['distance'] = 350
+    w.opts['distance'] = 500
     # g = gl.GLGridItem()
     # w.addItem(g)
     sp = gl.GLScatterPlotItem()
