@@ -12,8 +12,13 @@ class MainWindow(QtGui.QWidget):
 
         self.widget, self.view3d = make_3d_widget(get_data_hdf5('1'))
         self.widget.setMinimumSize(640, 480)
+        self.widget.setSizePolicy(
+            QtGui.QSizePolicy.Expanding, 
+            QtGui.QSizePolicy.Expanding)
         self.list = QtGui.QListWidget()
-        
+        self.list.setSizePolicy(
+            QtGui.QSizePolicy.Fixed, 
+            QtGui.QSizePolicy.Expanding)        
         for item in get_test_data_list():
             self.list.addItem(item)
 

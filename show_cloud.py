@@ -43,7 +43,7 @@ def get_test_data_list():
 
 def make_3d_widget(cloud_data):    
     w = gl.GLViewWidget()
-    w.opts['distance'] = 300
+    w.opts['distance'] = 350
     # g = gl.GLGridItem()
     # w.addItem(g)
     sp = gl.GLScatterPlotItem()
@@ -55,7 +55,7 @@ def make_3d_widget(cloud_data):
 
 def update_3d_scatter(item, data):
     item.resetTransform()
-    item.setData(pos = data, size=0.5, color=(0.3, 1, 0.0, 1))
+    item.setData(pos = data, size=0.3, color=(0.3, 1, 0.0, 1))
     center = data.mean(axis=0)
     item.translate(-center[0], -center[1], -center[2])
     # item.rotate(angle=180, x=1.0, y=0.0, z= 0.0)
